@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Dashboard</h1>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Computers</h2>
+				<table class="table table-striped", style="width:20px;white-space:nowrap">
+				<tr>
+				<td></td>
+				<td>Network</td>
+				<td>SSH</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				</tr>
+				<tr>
+				<td style="font-weight:bold">Storage server</td>
+				<td style="font-weight:bold">{{status1_1}}</td>
+				<td style="font-weight:bold">{{status1_2}}</td>
+				<td><a href="/wol_1" class="btn btn-info" role="button">WAKE</a></td>
+				<td><a href="/poff_1" class="btn btn-info" role="button">OFF</a></td>
+				<td><a href="/rboot_1" class="btn btn-info" role="button">REBOOT</a></td>
+				<td></td>
+				</tr>
+				</tr>
+				<tr>
+				<td style="font-weight:bold">Webserver</td>
+				<td style="font-weight:bold"></td>
+				<td style="font-weight:bold"></td>
+				<td></td>
+				<td><a href="/localoff" class="btn btn-info" role="button">OFF</a></td>
+				<td><a href="/localreboot" class="btn btn-info" role="button">REBOOT</a></td>
+				<td><a href="/localreapache" class="btn btn-info" role="button">REAPACHE</a></td>
+				</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+
+{% endblock %}

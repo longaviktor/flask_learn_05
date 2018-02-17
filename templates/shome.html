@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Smart home</h1>
+			<p>We got Skynet by the balls now, don't we? - John Connor</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Emelet</h2>
+				<table class="table table-striped", style="width:20px;white-space:nowrap">
+				<tr>
+				<th>Temperature</th>
+				<th>TimeDate</th>
+				</tr>
+				{% for row in table %}
+				<tr>
+				<td>{{row[1]}}</td>
+				<td>{{row[2]}}</td>
+				</tr>
+				{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}
